@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body{
@@ -57,7 +56,6 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* debug */
     height: 100vw;
 }
 
@@ -115,7 +113,6 @@ button {
 .little-card-container:hover {
     border: 3px solid white;
     opacity: 1;
-
 }
 
 .card-btn {
@@ -174,4 +171,27 @@ button {
 
 .bottom-btns:hover {
     border: 5px solid white;
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 1024px) {
+    
+    .master-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        width: 70%;
+    }
+
+    .bottom-btns {
+        font-size: 1.5vw;
+    }
+    
+    .inner-carosel-bottom {
+        height: 14%;
+    }
+
 }
