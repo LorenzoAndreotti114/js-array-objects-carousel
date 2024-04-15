@@ -9,6 +9,11 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
+.glowing {
+    border: 3px solid white;
+    opacity: 1;
+}
+
 .none {
     display: none;
 }
@@ -52,8 +57,6 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: aqua;
-
     /* debug */
     height: 100vw;
 }
@@ -66,7 +69,6 @@ button {
     align-items: center;
     width: 100%;
     height: 80%;
-    background-color: brown;    
 }
 
 /* BIG IMG CAROSEL */
@@ -106,8 +108,14 @@ button {
     border: 1px solid black;
 }
 
+.shaded {
+    opacity: 0.6;
+}
+
 .little-card-container:hover {
     border: 3px solid white;
+    opacity: 1;
+
 }
 
 .card-btn {
@@ -124,6 +132,7 @@ button {
     opacity: .6;
     top: 40%;
     left: 2%;
+    z-index: 10;
 }
 
 .btn-right {
@@ -135,11 +144,34 @@ button {
     opacity: .6;
     top: 40%;
     right: 2%;
+    z-index: 10;
 }
 
 /* BUTTONS */
-.inner-btns {
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 20%;
-    background-color: blueviolet;
+}
+
+.inner-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 40%;
+}
+
+.bottom-btns {
+    font-size: 2vw;
+    padding: 2% 5%;
+    color: white;
+    background-color: rgb(73, 73, 252);
+    border-radius: 10px;
+}
+
+.bottom-btns:hover {
+    border: 5px solid white;
 }

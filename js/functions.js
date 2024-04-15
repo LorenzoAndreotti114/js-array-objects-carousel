@@ -4,7 +4,7 @@ function littleCardCreator (array) {
         
         document.getElementById("caroselBottom").innerHTML +=
         `
-        <div class="little-card-container" id="littleCard">
+        <div class="little-card-container shaded" id="littleCard">
             <button class="card-btn" id="btn${x}">
                 <img src="./${array[x]["image"]}" alt="">
             </button>
@@ -58,3 +58,48 @@ function slideChangerBtn (currentImg, array) {
 
 
 }
+
+function caroselTimeChanger (){
+
+    if (checker === true) {
+        
+        if (invertChecker === true) {
+            curImg = curImg + 1;
+        }
+        else {
+            curImg = curImg - 1;
+        };
+
+        if (curImg > 4) {
+            curImg = curImg - 5;
+            console.clear();
+        }
+        else if (curImg < 0) {
+            curImg = curImg + 5;
+        };
+
+            document.getElementById("caroselTop").innerHTML =
+            `
+            <div class="big-card-container fade" id="bigCard">
+
+                <!-- IMG -->
+                <img src="./${arrayImages[curImg]["image"]}" alt="">
+
+                <!-- TEXT -->
+                <div class="big-card-text">
+                    <h2>${arrayImages[curImg]["title"]}</h2>
+
+                    <div class="f-size">${arrayImages[curImg]["text"]}</div>
+                </div>
+
+            </div>
+
+            `
+
+        console.log(curImg);
+
+        setTimeout(caroselTimeChanger, 3000);
+    }
+
+    return curImg;
+};
